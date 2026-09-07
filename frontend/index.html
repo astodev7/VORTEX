@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Imóveis — Imóveis de Alto Padrão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 10L6 12L16 6L26 12L28 10L16 2Z" fill="currentColor"/>
+                        <path d="M6 14V26H12V20H20V26H26V14L16 8L6 14Z" fill="currentColor"/>
+                    </svg>
+                    <span>Vortex</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="#imoveis" class="nav-link">Imóveis</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </nav>
+
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#imoveis" class="mobile-nav-link">Imóveis</a>
+            <a href="#sobre" class="mobile-nav-link">Sobre</a>
+            <a href="#contato" class="mobile-nav-link">Contato</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Imóveis que definem padrão</h1>
+                <p class="hero-subtitle">Curadoria exclusiva de residências de alto padrão em localização privilegiada</p>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <div class="search-field">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M9 17A8 8 0 109 1a8 8 0 000 16zM18 18l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <input type="text" placeholder="Buscar por localização ou código" class="search-input">
+                    </div>
+                    <div class="search-divider"></div>
+                    <select class="search-select">
+                        <option value="">Tipo</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="casa">Casa</option>
+                        <option value="cobertura">Cobertura</option>
+                        <option value="terreno">Terreno</option>
+                    </select>
+                    <div class="search-divider"></div>
+                    <select class="search-select">
+                        <option value="">Quartos</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                    </select>
+                    <button class="search-button">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-button active">Todos</button>
+                <button class="filter-button">Apartamento</button>
+                <button class="filter-button">Casa</button>
+                <button class="filter-button">Cobertura</button>
+                <button class="filter-button">Terreno</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="properties" id="imoveis">
+        <div class="container">
+            <div class="properties-grid">
+                <!-- Property Card 1 -->
+                <article class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="Apartamento luxuoso com vista" class="property-image" loading="lazy">
+                        <div class="property-badge">Lançamento</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Residencial Aurora</h3>
+                            <p class="property-location">Jardins, São Paulo</p>
+                        </div>
+                        <div class="property-features">
+                            <span class="property-feature">3 quartos</span>
+                            <span class="property-feature">2 vagas</span>
+                            <span class="property-feature">180m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">R$ 2.850.000</div>
+                            <button class="property-button">Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 2 -->
+                <article class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop" alt="Casa moderna" class="property-image" loading="lazy">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Villa Serenity</h3>
+                            <p class="property-location">Alphaville, Barueri</p>
+                        </div>
+                        <div class="property-features">
+                            <span class="property-feature">4 quartos</span>
+                            <span class="property-feature">4 vagas</span>
+                            <span class="property-feature">450m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">R$ 4.200.000</div>
+                            <button class="property-button">Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 3 -->
+                <article class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop" alt="Cobertura duplex" class="property-image" loading="lazy">
+                        <div class="property-badge">Destaque</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Cobertura Horizon</h3>
+                            <p class="property-location">Itaim Bibi, São Paulo</p>
+                        </div>
+                        <div class="property-features">
+                            <span class="property-feature">5 quartos</span>
+                            <span class="property-feature">3 vagas</span>
+                            <span class="property-feature">320m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">R$ 5.600.000</div>
+                            <button class="property-button">Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 4 -->
+                <article class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop" alt="Casa contemporânea" class="property-image" loading="lazy">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Casa Magnólia</h3>
+                            <p class="property-location">Morumbi, São Paulo</p>
+                        </div>
+                        <div class="property-features">
+                            <span class="property-feature">4 quartos</span>
+                            <span class="property-feature">3 vagas</span>
+                            <span class="property-feature">380m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">R$ 3.950.000</div>
+                            <button class="property-button">Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 5 -->
+                <article class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&h=600&fit=crop" alt="Apartamento minimalista" class="property-image" loading="lazy">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Loft Urban</h3>
+                            <p class="property-location">Vila Madalena, São Paulo</p>
+                        </div>
+                        <div class="property-features">
+                            <span class="property-feature">2 quartos</span>
+                            <span class="property-feature">1 vaga</span>
+                            <span class="property-feature">120m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">R$ 1.680.000</div>
+                            <button class="property-button">Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 6 -->
+                <article class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="Residência contemporânea" class="property-image" loading="lazy">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3 class="property-title">Residência Ébano</h3>
+                            <p class="property-location">Granja Viana, Cotia</p>
+                        </div>
+                        <div class="property-features">
+                            <span class="property-feature">5 quartos</span>
+                            <span class="property-feature">4 vagas</span>
+                            <span class="property-feature">520m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">R$ 6.400.000</div>
+                            <button class="property-button">Ver detalhes</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Excelência em imóveis de alto padrão</h2>
+                    <p class="about-text">Com mais de 15 anos de experiência no mercado imobiliário de luxo, a Vortex se dedica a conectar clientes exigentes aos imóveis mais exclusivos.</p>
+                    <p class="about-text">Nossa curadoria rigorosa e atendimento personalizado garantem que cada transação seja conduzida com máxima transparência e profissionalismo.</p>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">850+</div>
+                            <div class="stat-label">Imóveis vendidos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">R$ 2.8bi</div>
+                            <div class="stat-label">Em transações</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfação</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=1000&fit=crop" alt="Arquitetura moderna" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title centered">Entre em contato</h2>
+                <p class="contact-subtitle">Nossa equipe está pronta para encontrar o imóvel ideal para você</p>
+
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefone</label>
+                            <input type="tel" id="phone" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest" class="form-label">Interesse</label>
+                            <select id="interest" class="form-input">
+                                <option value="">Selecione</option>
+                                <option value="comprar">Comprar</option>
+                                <option value="vender">Vender</option>
+                                <option value="alugar">Alugar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea id="message" class="form-input form-textarea" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 10L6 12L16 6L26 12L28 10L16 2Z" fill="currentColor"/>
+                            <path d="M6 14V26H12V20H20V26H26V14L16 8L6 14Z" fill="currentColor"/>
+                        </svg>
+                        <span>Vortex</span>
+                    </div>
+                    <p class="footer-tagline">Imóveis de alto padrão</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Empresa</h4>
+                        <a href="#sobre" class="footer-link">Sobre</a>
+                        <a href="#" class="footer-link">Equipe</a>
+                        <a href="#" class="footer-link">Carreira</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Serviços</h4>
+                        <a href="#" class="footer-link">Comprar</a>
+                        <a href="#" class="footer-link">Vender</a>
+                        <a href="#" class="footer-link">Alugar</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Contato</h4>
+                        <a href="tel:+551131234567" class="footer-link">(11) 3123-4567</a>
+                        <a href="mailto:contato@vortex.com.br" class="footer-link">contato@vortex.com.br</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Imóveis. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html" class="footer-link">Privacidade</a>
+                    <a href="terms.html" class="footer-link">Termos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <h3 class="cookie-banner-title">Cookies e Privacidade</h3>
+                <p class="cookie-banner-description">
+                    Utilizamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site.
+                    Ao continuar navegando, você concorda com nossa <a href="privacy.html">Política de Privacidade</a>.
+                </p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button class="cookie-banner-button secondary" id="cookieReject">Recusar</button>
+                <button class="cookie-banner-button primary" id="cookieAccept">Aceitar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

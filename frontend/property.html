@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel — Vortex Imóveis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 10L6 12L16 6L26 12L28 10L16 2Z" fill="currentColor"/>
+                        <path d="M6 14V26H12V20H20V26H26V14L16 8L6 14Z" fill="currentColor"/>
+                    </svg>
+                    <span>Vortex</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html#imoveis" class="nav-link">Imóveis</a>
+                    <a href="index.html#sobre" class="nav-link">Sobre</a>
+                    <a href="index.html#contato" class="nav-link">Contato</a>
+                </nav>
+
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html#imoveis" class="mobile-nav-link">Imóveis</a>
+            <a href="index.html#sobre" class="mobile-nav-link">Sobre</a>
+            <a href="index.html#contato" class="mobile-nav-link">Contato</a>
+        </div>
+    </div>
+
+    <!-- Property Detail -->
+    <section class="property-detail">
+        <div class="container">
+            <!-- Back Button -->
+            <a href="index.html#imoveis" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Voltar aos imóveis
+            </a>
+
+            <!-- Property Header -->
+            <div class="property-detail-header">
+                <div>
+                    <h1 class="property-detail-title" id="propertyTitle">Carregando...</h1>
+                    <p class="property-detail-location" id="propertyLocation">—</p>
+                </div>
+                <div class="property-detail-price" id="propertyPrice">—</div>
+            </div>
+
+            <!-- Property Gallery -->
+            <div class="property-gallery">
+                <div class="property-gallery-main">
+                    <img id="mainImage" src="" alt="Imóvel principal">
+                </div>
+                <div class="property-gallery-thumbs" id="galleryThumbs">
+                    <!-- Thumbnails will be injected by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Property Content Grid -->
+            <div class="property-detail-grid">
+                <!-- Main Content -->
+                <div class="property-detail-main">
+                    <!-- Overview -->
+                    <div class="detail-section">
+                        <h2 class="detail-section-title">Visão geral</h2>
+                        <div class="property-specs">
+                            <div class="property-spec">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="18" height="18" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <div>
+                                    <div class="property-spec-label">Área total</div>
+                                    <div class="property-spec-value" id="specArea">—</div>
+                                </div>
+                            </div>
+                            <div class="property-spec">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <div>
+                                    <div class="property-spec-label">Quartos</div>
+                                    <div class="property-spec-value" id="specRooms">—</div>
+                                </div>
+                            </div>
+                            <div class="property-spec">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="18" height="18" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                <div>
+                                    <div class="property-spec-label">Banheiros</div>
+                                    <div class="property-spec-value" id="specBaths">—</div>
+                                </div>
+                            </div>
+                            <div class="property-spec">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 17L8 12L3 7M9 17H21M9 7H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <div>
+                                    <div class="property-spec-label">Vagas</div>
+                                    <div class="property-spec-value" id="specGarage">—</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="detail-section">
+                        <h2 class="detail-section-title">Sobre o imóvel</h2>
+                        <div class="detail-text" id="propertyDescription">
+                            <p>Carregando descrição...</p>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="detail-section">
+                        <h2 class="detail-section-title">Características</h2>
+                        <div class="features-grid" id="featuresList">
+                            <!-- Features will be injected by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="detail-section">
+                        <h2 class="detail-section-title">Localização</h2>
+                        <div class="location-info" id="locationInfo">
+                            <p>Carregando informações de localização...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="property-detail-sidebar">
+                    <!-- Contact Card -->
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Interessado neste imóvel?</h3>
+                        <p class="contact-card-text">Entre em contato com nossa equipe para agendar uma visita.</p>
+
+                        <form class="contact-card-form">
+                            <input type="text" placeholder="Nome" class="contact-card-input" required>
+                            <input type="email" placeholder="E-mail" class="contact-card-input" required>
+                            <input type="tel" placeholder="Telefone" class="contact-card-input" required>
+                            <textarea placeholder="Mensagem (opcional)" class="contact-card-input contact-card-textarea" rows="3"></textarea>
+                            <button type="submit" class="contact-card-button">Enviar mensagem</button>
+                        </form>
+
+                        <div class="contact-card-divider"></div>
+
+                        <div class="contact-card-direct">
+                            <p class="contact-card-label">Ou ligue diretamente:</p>
+                            <a href="tel:+551131234567" class="contact-card-phone">(11) 3123-4567</a>
+                        </div>
+                    </div>
+
+                    <!-- Property Info -->
+                    <div class="property-info-card">
+                        <h4 class="property-info-title">Informações do imóvel</h4>
+                        <div class="property-info-list">
+                            <div class="property-info-item">
+                                <span class="property-info-label">Código</span>
+                                <span class="property-info-value" id="propertyCode">—</span>
+                            </div>
+                            <div class="property-info-item">
+                                <span class="property-info-label">Tipo</span>
+                                <span class="property-info-value" id="propertyType">—</span>
+                            </div>
+                            <div class="property-info-item">
+                                <span class="property-info-label">Status</span>
+                                <span class="property-info-value" id="propertyStatus">—</span>
+                            </div>
+                            <div class="property-info-item">
+                                <span class="property-info-label">IPTU/ano</span>
+                                <span class="property-info-value" id="propertyTax">—</span>
+                            </div>
+                            <div class="property-info-item">
+                                <span class="property-info-label">Condomínio</span>
+                                <span class="property-info-value" id="propertyCondo">—</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 10L6 12L16 6L26 12L28 10L16 2Z" fill="currentColor"/>
+                            <path d="M6 14V26H12V20H20V26H26V14L16 8L6 14Z" fill="currentColor"/>
+                        </svg>
+                        <span>Vortex</span>
+                    </div>
+                    <p class="footer-tagline">Imóveis de alto padrão</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Empresa</h4>
+                        <a href="index.html#sobre" class="footer-link">Sobre</a>
+                        <a href="#" class="footer-link">Equipe</a>
+                        <a href="#" class="footer-link">Carreira</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Serviços</h4>
+                        <a href="#" class="footer-link">Comprar</a>
+                        <a href="#" class="footer-link">Vender</a>
+                        <a href="#" class="footer-link">Alugar</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Contato</h4>
+                        <a href="tel:+551131234567" class="footer-link">(11) 3123-4567</a>
+                        <a href="mailto:contato@vortex.com.br" class="footer-link">contato@vortex.com.br</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Vortex Imóveis. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html" class="footer-link">Privacidade</a>
+                    <a href="terms.html" class="footer-link">Termos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="property-data.js"></script>
+    <script src="property-detail.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

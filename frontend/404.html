@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada — Vortex Imóveis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 10L6 12L16 6L26 12L28 10L16 2Z" fill="currentColor"/>
+                        <path d="M6 14V26H12V20H20V26H26V14L16 8L6 14Z" fill="currentColor"/>
+                    </svg>
+                    <span>Vortex</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="index.html#imoveis" class="nav-link">Imóveis</a>
+                    <a href="index.html#sobre" class="nav-link">Sobre</a>
+                    <a href="index.html#contato" class="nav-link">Contato</a>
+                </nav>
+
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html#imoveis" class="mobile-nav-link">Imóveis</a>
+            <a href="index.html#sobre" class="mobile-nav-link">Sobre</a>
+            <a href="index.html#contato" class="mobile-nav-link">Contato</a>
+        </div>
+    </div>
+
+    <!-- 404 Content -->
+    <section class="error-page">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-number">404</div>
+                <h1 class="error-title">Página não encontrada</h1>
+                <p class="error-description">O imóvel que você procura pode ter sido vendido ou a página não existe mais.</p>
+                <div class="error-actions">
+                    <a href="index.html" class="error-button primary">Voltar ao início</a>
+                    <a href="index.html#imoveis" class="error-button secondary">Ver imóveis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
