@@ -665,6 +665,11 @@ a {
     font-size: var(--font-size-sm);
 }
 
+.footer-description {
+    margin-top: var(--space-3);
+    font-size: var(--font-size-sm);
+}
+
 .footer-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
