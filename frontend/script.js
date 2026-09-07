@@ -254,6 +254,54 @@ document.addEventListener('mousedown', () => {
     document.body.classList.remove('keyboard-nav');
 });
 
+// Service Links - Navigate to contact form with pre-selected option
+const serviceLinks = document.querySelectorAll('.service-link');
+
+serviceLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const service = link.getAttribute('data-service');
+
+        // Scroll to contact form
+        const contactSection = document.getElementById('contato');
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        const targetPosition = contactSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+
+        // Wait for scroll to complete, then update form
+        setTimeout(() => {
+            const interestSelect = document.getElementById('interest');
+            const contactSubtitle = document.getElementById('contactSubtitle');
+
+            if (interestSelect && contactSubtitle) {
+                interestSelect.value = service;
+
+                // Update subtitle based on service
+                const messages = {
+                    'comprar': 'Conte-nos sobre o imóvel dos seus sonhos',
+                    'vender': 'Descreva o imóvel que você deseja vender',
+                    'alugar': 'Informe-nos sobre suas necessidades de locação'
+                };
+
+                contactSubtitle.textContent = messages[service];
+                contactSubtitle.classList.add('highlight');
+
+                // Focus on first input
+                document.getElementById('name').focus();
+
+                // Remove highlight after 3 seconds
+                setTimeout(() => {
+                    contactSubtitle.classList.remove('highlight');
+                }, 3000);
+            }
+        }, 800);
+    });
+});
+
 // Cookie Banner Management
 const cookieBanner = document.getElementById('cookieBanner');
 const cookieAccept = document.getElementById('cookieAccept');
