@@ -7,26 +7,24 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="home-page">
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M16 2L4 10L6 12L16 6L26 12L28 10L16 2Z" fill="currentColor"/>
-                        <path d="M6 14V26H12V20H20V26H26V14L16 8L6 14Z" fill="currentColor"/>
-                    </svg>
-                    <span>Vortex</span>
+                <a href="index.html" class="logo" aria-label="Vortex Imóveis — início">
+                    <span class="logo-wordmark">VORTEX</span>
+                    <span class="logo-descriptor">IMÓVEIS DE ALTO PADRÃO</span>
                 </a>
 
                 <nav class="nav">
+                    <a href="#inicio" class="nav-link">Início</a>
                     <a href="#imoveis" class="nav-link">Imóveis</a>
                     <a href="#sobre" class="nav-link">Sobre</a>
                     <a href="#contato" class="nav-link">Contato</a>
                 </nav>
 
-                <button class="menu-toggle" aria-label="Menu">
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -38,6 +36,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-content">
+            <a href="#inicio" class="mobile-nav-link">Início</a>
             <a href="#imoveis" class="mobile-nav-link">Imóveis</a>
             <a href="#sobre" class="mobile-nav-link">Sobre</a>
             <a href="#contato" class="mobile-nav-link">Contato</a>
@@ -45,23 +44,38 @@
     </div>
 
     <!-- Hero -->
-    <section class="hero">
-        <div class="hero-background"></div>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-background" role="img" aria-label="Residência contemporânea com fachada iluminada ao entardecer"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Imóveis que definem padrão</h1>
-                <p class="hero-subtitle">Curadoria exclusiva de residências de alto padrão em localização privilegiada</p>
+                <p class="hero-eyebrow">UMA NOVA PERSPECTIVA DE MORAR</p>
+                <h1 class="hero-title" id="hero-title">Espaços para<br>viver o <em>extraordinário.</em></h1>
+                <p class="hero-subtitle">Uma seleção de residências singulares para quem reconhece o valor de cada detalhe.</p>
+                <div class="hero-actions">
+                    <a class="hero-link" href="#imoveis">Explorar imóveis <span aria-hidden="true">→</span></a>
+                    <a class="hero-link" href="#sobre">Conheça a Vortex <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+        <span class="hero-index" aria-hidden="true">VORTEX / 01</span>
+    </section>
 
-                <!-- Search Bar -->
-                <div class="search-bar">
+    <section class="discovery" aria-labelledby="discovery-title">
+        <div class="container">
+            <div class="discovery-heading">
+                <p class="discovery-eyebrow">CURADORIA VORTEX</p>
+                <h2 id="discovery-title">Encontre o seu lugar.</h2>
+                <p>Explore endereços escolhidos por sua arquitetura, localização e forma de viver.</p>
+            </div>
+                <div class="search-bar" role="search" aria-label="Buscar imóveis">
                     <div class="search-field">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M9 17A8 8 0 109 1a8 8 0 000 16zM18 18l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
-                        <input type="text" placeholder="Buscar por localização ou código" class="search-input">
+                        <input type="search" placeholder="Localização ou nome do imóvel" class="search-input" aria-label="Localização ou nome do imóvel">
                     </div>
                     <div class="search-divider"></div>
-                    <select class="search-select">
+                    <select class="search-select" aria-label="Tipo de imóvel">
                         <option value="">Tipo</option>
                         <option value="apartamento">Apartamento</option>
                         <option value="casa">Casa</option>
@@ -69,19 +83,18 @@
                         <option value="terreno">Terreno</option>
                     </select>
                     <div class="search-divider"></div>
-                    <select class="search-select">
+                    <select class="search-select" aria-label="Número mínimo de quartos">
                         <option value="">Quartos</option>
                         <option value="1">1+</option>
                         <option value="2">2+</option>
                         <option value="3">3+</option>
                         <option value="4">4+</option>
                     </select>
-                    <button class="search-button">
+                    <button class="search-button" type="button">
                         Buscar
                     </button>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Filters -->

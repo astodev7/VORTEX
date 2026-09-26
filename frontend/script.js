@@ -6,6 +6,8 @@ const body = document.body;
 menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
     mobileMenu.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', String(menuToggle.classList.contains('active')));
+    document.querySelector('.header').classList.toggle('menu-open', menuToggle.classList.contains('active'));
 });
 
 // Close mobile menu when clicking on a link
@@ -14,6 +16,8 @@ mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.querySelector('.header').classList.remove('menu-open');
     });
 });
 
@@ -22,6 +26,8 @@ document.addEventListener('click', (e) => {
     if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
         menuToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.querySelector('.header').classList.remove('menu-open');
     }
 });
 
@@ -78,22 +84,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Header Scroll Effect
-let lastScroll = 0;
 const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 1px 2px rgba(0, 0, 0, 0.04)';
-    } else {
-        header.style.background = 'rgba(255, 255, 255, 0.92)';
-        header.style.boxShadow = 'none';
-    }
-
-    lastScroll = currentScroll;
-});
+const homeHero = document.querySelector('.home-page .hero');
+const updateHeader = () => {
+    const pastHero = homeHero ? homeHero.getBoundingClientRect().bottom <= 0 : window.scrollY > 100;
+    header.classList.toggle('is-scrolled', pastHero);
+    header.classList.toggle('is-over-hero', Boolean(homeHero) && window.scrollY > 12 && !pastHero);
+};
+window.addEventListener('scroll', updateHeader, { passive: true });
+window.addEventListener('resize', updateHeader);
+updateHeader();
 
 // Form Validation
 const contactForm = document.querySelector('.contact-form');
@@ -218,9 +219,9 @@ searchButton.addEventListener('click', () => {
     });
 });
 
-// Enter key on search
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
         searchButton.click();
     }
 });
